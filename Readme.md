@@ -11,5 +11,7 @@ Jordan for Troubleshooting
 SETUP ::
 
 SetVehicleExtra(veh, EXTRA1, true) -- True = Disabled when command is ran
+
 SetVehicleExtra(veh, EXTRA1, enabled) -- Enabled = Enabled when Command is ran
+
 SetVehicleExtra(veh, 1, true) -- 1 = The extra Number, do not include the EXTRA, only include the number
