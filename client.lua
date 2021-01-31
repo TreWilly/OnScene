@@ -14,7 +14,8 @@ RegisterCommand('onscene', function(source, args, rawCommand)
          SetVehicleExtra(veh, EXTRA8, enable)
          SetVehicleDoorOpen(veh, 2, false, false);              --[[This will open doors upon running the command. You can disable this by removing the 'SetVehicleDoor']]--
          SetVehicleDoorOpen(veh, 3, false, false);
-         SetVehicleDoorOpen(veh, 5, false, false); 
+         SetVehicleDoorOpen(veh, 5, false, false);
+         SpawnCar("spawncode")                              --[[This will spawn a vehicle upon running the command, like a stretcher for example]]--
     else
     if vehName == "SPAWNCODE2" then
         SetVehicleExtra(veh, EXTRA1, true)
@@ -191,6 +192,9 @@ RegisterCommand('offscene', function(source, args, rawCommand)
                     SetVehicleExtra(veh, EXTRA1, true)
                     SetVehicleExtra(veh, EXTRA1, true)
                     SetVehicleExtra(veh, EXTRA1, true)
+
+
+                    
                 end
                 end
             end
@@ -199,4 +203,20 @@ RegisterCommand('offscene', function(source, args, rawCommand)
     end
 end
 end)
+
+--[[Functions]]--
+
+function SpawnCar(vehicleName)
+    local myPed = GetPlayerPed(-1)
+    local vehicle = GetHashKey(vehicleName)
+    RequestModel(vehicle)
+    while not HasModelLoaded(vehicle) do
+      Wait(1)
+    end
+    local coords = GetOffsetFromEntityInWorldCoords(GetPlayerPed(-1), 0, -10.0, 0)
+    local spawned_car = CreateVehicle(vehicle, coords, GetEntityHeading(myPed), true, false)
+    SetVehicleOnGroundProperly(spawned_car)
+    SetModelAsNoLongerNeeded(vehicle)
+    Citizen.InvokeNative(0xB736A491E64A32CF,Citizen.PointerValueIntInitialized(spawned_car))
+  end
     
