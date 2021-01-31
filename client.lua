@@ -104,6 +104,10 @@ RegisterCommand('offscene', function(source, args, rawCommand)
     local vehName = string.lower(GetDisplayNameFromVehicleModel(GetEntityModel(veh)))
     print(vehName)
     if vehName == "SPAWNCODE1" then
+        SetVehicleDoorShut(veh, 2, false);              
+        SetVehicleDoorShut(veh, 3, false);
+        SetVehicleDoorShut(veh, 5, false);
+        Citizen.Wait(1000)
          SetVehicleExtra(veh, EXTRA1, true)
          SetVehicleExtra(veh, EXTRA2, enable)
          SetVehicleExtra(veh, EXTRA3, enable)         
@@ -112,9 +116,7 @@ RegisterCommand('offscene', function(source, args, rawCommand)
          SetVehicleExtra(veh, EXTRA6, enable)
          SetVehicleExtra(veh, EXTRA7, enable)
          SetVehicleExtra(veh, EXTRA8, enable)
-         SetVehicleDoorOpen(veh, 2, false, false);              
-         SetVehicleDoorOpen(veh, 3, false, false);
-         SetVehicleDoorOpen(veh, 5, false, false); 
+  
     else
     if vehName == "SPAWNCODE2" then
         SetVehicleExtra(veh, EXTRA1, true)
