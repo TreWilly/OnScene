@@ -3,7 +3,7 @@ RegisterCommand('onscene', function(source, args, rawCommand)
     local veh = GetVehiclePedIsIn(ped, veh, vehName)
     local vehName = string.lower(GetDisplayNameFromVehicleModel(GetEntityModel(veh)))
     print(vehName)
-    if vehName == "SPAWNCODE1" then
+    if vehName == Config.SpawnCode1 then
          SetVehicleExtra(veh, EXTRA1, true)
          SetVehicleExtra(veh, EXTRA2, enable)
          SetVehicleExtra(veh, EXTRA3, enable)           --[[This will ENABLE the EXTRA using the command /onscene, to disable an extra, simply change ENABLED to TRUE]]
@@ -17,7 +17,7 @@ RegisterCommand('onscene', function(source, args, rawCommand)
          SetVehicleDoorOpen(veh, 5, false, false);
          SpawnCar("spawncode")                              --[[This will spawn a vehicle upon running the command, like a stretcher for example]]--
     else
-    if vehName == "SPAWNCODE2" then
+    if vehName == Config.SpawnCode2  then
         SetVehicleExtra(veh, EXTRA1, true)
         SetVehicleExtra(veh, EXTRA2, enable)
         SetVehicleExtra(veh, EXTRA3, true)
@@ -25,7 +25,7 @@ RegisterCommand('onscene', function(source, args, rawCommand)
         SetVehicleExtra(veh, EXTRA5, enable)
         SetVehicleExtra(veh, EXTRA6, enable)
     else
-    if vehName == "SPAWNCODE3" then
+    if vehName == Config.SpawnCode3  then
         SetVehicleExtra(veh, EXTRA1, enable)
         SetVehicleExtra(veh, EXTRA2, enable)
         SetVehicleExtra(veh, EXTRA3, enable)
@@ -36,7 +36,7 @@ RegisterCommand('onscene', function(source, args, rawCommand)
         SetVehicleExtra(veh, EXTRA8, enable)
         SetVehicleExtra(veh, EXTRA9, true)
     else
-        if vehName == "SPAWNCODE4" then
+        if vehName == Config.SpawnCode4 then
         SetVehicleExtra(veh, EXTRA1, enable)
         SetVehicleExtra(veh, EXTRA2, enable)
         SetVehicleExtra(veh, EXTRA3, enable)
@@ -49,7 +49,7 @@ RegisterCommand('onscene', function(source, args, rawCommand)
         SetVehicleExtra(veh, EXTRA10, true)
         SetVehicleExtra(veh, EXTRA11, true)
         else
-            if vehName == "SPAWNCODE5" then
+            if vehName == Config.SpawnCode5  then
                 SetVehicleExtra(veh, EXTRA1, enable)
                 SetVehicleExtra(veh, EXTRA2, enable)
                 SetVehicleExtra(veh, EXTRA3, enable)
@@ -63,7 +63,7 @@ RegisterCommand('onscene', function(source, args, rawCommand)
                 SetVehicleExtra(veh, EXTRA11, true)
                 SetVehicleExtra(veh, EXTRA12, true)
             else
-                if vehName == "SPAWNCODE6" then
+                if vehName == Config.SpawnCode6  then
                     SetVehicleExtra(veh, EXTRA1, enable)
                     SetVehicleExtra(veh, EXTRA1, enable)
                     SetVehicleExtra(veh, EXTRA1, true)
@@ -77,7 +77,7 @@ RegisterCommand('onscene', function(source, args, rawCommand)
                     SetVehicleExtra(veh, EXTRA1, true)
                     SetVehicleExtra(veh, EXTRA1, true)
                     SetVehicleDoorOpen(veh, 5, false, false);
-                else if vehName == "SPAWNCODE7" then
+                else if vehName == Config.SpawnCode7 then
                     SetVehicleExtra(veh, EXTRA1, enable)
                     SetVehicleExtra(veh, EXTRA1, enable)
                     SetVehicleExtra(veh, EXTRA1, enable)
@@ -104,7 +104,7 @@ RegisterCommand('offscene', function(source, args, rawCommand)
     local veh = GetVehiclePedIsIn(ped, veh, vehName)
     local vehName = string.lower(GetDisplayNameFromVehicleModel(GetEntityModel(veh)))
     print(vehName)
-    if vehName == "SPAWNCODE1" then
+    if vehName == Config.SpawnCode1 then
         SetVehicleDoorShut(veh, 2, false);              
         SetVehicleDoorShut(veh, 3, false);
         SetVehicleDoorShut(veh, 5, false);
@@ -119,7 +119,7 @@ RegisterCommand('offscene', function(source, args, rawCommand)
          SetVehicleExtra(veh, EXTRA8, enable)
   
     else
-    if vehName == "SPAWNCODE2" then
+    if vehName == Config.SpawnCode2 then
         SetVehicleExtra(veh, EXTRA1, true)
         SetVehicleExtra(veh, EXTRA2, enable)
         SetVehicleExtra(veh, EXTRA3, true)
@@ -127,7 +127,7 @@ RegisterCommand('offscene', function(source, args, rawCommand)
         SetVehicleExtra(veh, EXTRA5, enable)
         SetVehicleExtra(veh, EXTRA6, enable)
     else
-    if vehName == "SPAWNCODE3" then
+    if vehName == Config.SpawnCode3 then
         SetVehicleExtra(veh, EXTRA1, enable)
         SetVehicleExtra(veh, EXTRA2, enable)
         SetVehicleExtra(veh, EXTRA3, enable)
@@ -138,7 +138,7 @@ RegisterCommand('offscene', function(source, args, rawCommand)
         SetVehicleExtra(veh, EXTRA8, enable)
         SetVehicleExtra(veh, EXTRA9, true)
     else
-        if vehName == "SPAWNCODE4" then
+        if vehName == Config.SpawnCode4 then
         SetVehicleExtra(veh, EXTRA1, enable)
         SetVehicleExtra(veh, EXTRA2, enable)
         SetVehicleExtra(veh, EXTRA3, enable)
@@ -151,7 +151,7 @@ RegisterCommand('offscene', function(source, args, rawCommand)
         SetVehicleExtra(veh, EXTRA10, true)
         SetVehicleExtra(veh, EXTRA11, true)
         else
-            if vehName == "SPAWNCODE5" then
+            if vehName == Config.SpawnCode5 then
                 SetVehicleExtra(veh, EXTRA1, enable)
                 SetVehicleExtra(veh, EXTRA2, enable)
                 SetVehicleExtra(veh, EXTRA3, enable)
@@ -165,7 +165,7 @@ RegisterCommand('offscene', function(source, args, rawCommand)
                 SetVehicleExtra(veh, EXTRA11, true)
                 SetVehicleExtra(veh, EXTRA12, true)
             else
-                if vehName == "SPAWNCODE6" then
+                if vehName == Config.SpawnCode6  then
                     SetVehicleExtra(veh, EXTRA1, enable)
                     SetVehicleExtra(veh, EXTRA1, enable)
                     SetVehicleExtra(veh, EXTRA1, true)
@@ -179,7 +179,7 @@ RegisterCommand('offscene', function(source, args, rawCommand)
                     SetVehicleExtra(veh, EXTRA1, true)
                     SetVehicleExtra(veh, EXTRA1, true)
                     SetVehicleDoorOpen(veh, 5, false, false);
-                else if vehName == "SPAWNCODE7" then
+                else if vehName == Config.SpawnCode7 then
                     SetVehicleExtra(veh, EXTRA1, enable)
                     SetVehicleExtra(veh, EXTRA1, enable)
                     SetVehicleExtra(veh, EXTRA1, enable)
